@@ -2,16 +2,13 @@ package com.pesalink.pesalink.soap;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
-import jakarta.xml.bind.annotation.XmlRootElement;
-import lombok.Data;
+import jakarta.xml.bind.annotation.XmlElement;
 
-@XmlRootElement(name = "CountryName", namespace = "http://www.oorsprong.org/websamples.countryinfo")
-@Data
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CountryName {
-    @XmlAttribute(name = "sCountryISOCode")
+    @XmlElement(namespace = "http://www.oorsprong.org/websamples.countryinfo")
     private String sCountryISOCode;
+
     public String getsCountryISOCode() {
         return sCountryISOCode;
     }
